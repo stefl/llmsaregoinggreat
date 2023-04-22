@@ -29,8 +29,8 @@ export default function Index({ posts, globalData }) {
           A crowd-sourced collection of everything you shouldn&apos;t be
           building with LLMs. You&apos;re… not doing that right?
         </p>
-        <div className="flex-row flex w-full">
-          <div className="flex-auto text-center">
+        <div className="flex-col lg:flex-row flex w-full">
+          <div className="flex-auto text-center mb-12 lg:mb-0">
             <Link href="/evil">
               <a className="border border-white font-bold text-xl rounded p-4 hover:bg-white hover:text-gray-600">
                 😇 I&apos;m feeling evil
@@ -60,7 +60,7 @@ export default function Index({ posts, globalData }) {
         style={{ zIndex: -1 }}
       >
         <div
-          className="w-1/2 absolute top-0 left-0 h-screen pointer-events-none"
+          className="w-1/2 absolute top-0 left-0 h-screen pointer-events-none hidden lg:block"
           style={{
             backgroundColor: '#ff0000',
             mixBlendMode: 'multiply',
