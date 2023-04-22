@@ -47,6 +47,7 @@ export default function Evil({ posts, globalData }) {
                             src={post.fields['Image'][0].url}
                             width={post.fields['Image'][0].width}
                             height={post.fields['Image'][0].height}
+                            alt="Project Thumbnail"
                           />
                         )}
                       </div>
