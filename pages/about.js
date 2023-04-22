@@ -23,6 +23,22 @@ const AboutTheProject = ({ globalData }) => {
           A crowd-sourced collection of everything you shouldn&apos;t be
           building with LLMs. You&apos;re… not doing that right?
         </p>
+
+        <p className="block mb-12 text-center">
+          This project was made at{' '}
+          <a href="https://commonmagic.notion.site/commonmagic/AI-Hackathon-London-0d33d78465894bbb8639f19f5daf6b50">
+            the inaugural AI Hackathon London
+          </a>
+          .
+        </p>
+
+        <p className="block mb-12 text-center">
+          What started as a playful idea to explore the darker side of the
+          exciting recent developments turned into this website which gathers
+          several experiments the LLMSAGG team made over twenty four hours
+          together.
+        </p>
+
       </main>
     </Layout>
   );
