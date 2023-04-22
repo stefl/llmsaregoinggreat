@@ -8,9 +8,15 @@ import Layout, { GradientBackground } from '../../components/Layout';
 import { getGlobalData } from '../../utils/global-data';
 import SEO from '../../components/SEO';
 const EvilProject = ({ project, globalData }) => {
+  if (!project) {
+    return <></>;
+  }
   return (
     <Layout>
-      <SEO title={project.fields['Name']} description={project.fields['One Liner']} />
+      <SEO
+        title={project.fields['Name']}
+        description={project.fields['One Liner']}
+      />
       <Header name="LLMs are Going Great!" />
       <main className="w-full">
         <h1 className="text-3xl lg:text-5xl text-center mb-12">
