@@ -29,7 +29,7 @@ export default function Good({ posts, globalData }) {
       <Header name={globalData.name} />
       <main className="w-full">
         <h1 className="text-3xl lg:text-5xl text-center mb-12">
-          <Link href="/">{globalData.blogTitle}</Link>
+          <Link href="/">None of that evil stuff, let&apos;s stay positive!</Link>
         </h1>
         {posts && (
           <ul className="w-full">
