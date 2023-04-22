@@ -8,15 +8,25 @@ const Project = ({ project }) => {
         {project.fields['One Liner']}
       </p>
 
-      <div className="mt-12 text-center">
-        {project.fields['URL'] && (
+      {project.fields['URL'] && (
+        <div className="mt-12 text-center">
           <Link href={project.fields['URL']}>
             <a className="p-4 bg-slate-300 text-slate-800 rounded">
               View project
             </a>
           </Link>
-        )}
-      </div>
+        </div>
+      )}
+
+      {project.fields['Loom URL'] && (
+        <div className="mt-12 text-center">
+          <Link href={project.fields['Loom URL']}>
+            <a className="p-4 bg-slate-300 text-slate-800 rounded">
+              Watch video
+            </a>
+          </Link>
+        </div>
+      )}
 
       {project.fields['Image'] && (
         <div className="mt-12 text-center">
@@ -28,8 +38,17 @@ const Project = ({ project }) => {
         </div>
       )}
 
-      <div className="mt-12 mb-16">{project.fields['Description']}</div>
-
+      {project.fields['Description'] && (
+        <div className="mt-12 mb-16">
+          {project.fields['Description'].split('\n\n').map((paragraph) => (
+            <p>
+              {paragraph
+                .split('\n')
+                .reduce((total, line) => [total, <br />, line])}
+            </p>
+          ))}
+        </div>
+      )}
     </>
   );
 };

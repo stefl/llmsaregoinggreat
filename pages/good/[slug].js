@@ -36,14 +36,6 @@ const EvilProject = ({ project, globalData }) => {
         className="absolute top-0 left-0 h-screen w-full"
         style={{ zIndex: -1 }}
       >
-        <div
-          className="w-full fixed top-0 left-0 h-screen pointer-events-none"
-          style={{
-            backgroundColor: '#ff0000',
-            mixBlendMode: 'multiply',
-            opacity: 0.5,
-          }}
-        />
         <GradientBackground
           variant="large"
           className="fixed top-20 opacity-40 dark:opacity-60"
