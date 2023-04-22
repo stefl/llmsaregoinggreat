@@ -69,6 +69,14 @@ export default function Evil({ posts, globalData }) {
             ))}
           </ul>
         )}
+        <div className="py-12">
+          <a
+            href="https://airtable.com/shrFBuQCsnUA2QuhS"
+            className="p-4 bg-slate-300 text-slate-800 rounded"
+          >
+            Add your own idea
+          </a>
+        </div>
       </main>
       <Footer copyrightText={globalData.footerText} />
       <div

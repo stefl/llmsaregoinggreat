@@ -9,15 +9,15 @@ import { getGlobalData } from '../../utils/global-data';
 import SEO from '../../components/SEO';
 import { useEffect } from 'react';
 const EvilProject = ({ project, globalData }) => {
-  if (!project) {
-    return <></>;
-  }
-
   useEffect(() => {
     document.documentElement.classList.add('light');
     document.documentElement.classList.remove('dark');
     localStorage.setItem('theme', 'light');
   });
+
+  if (!project) {
+    return <></>;
+  }
   return (
     <Layout>
       <SEO
