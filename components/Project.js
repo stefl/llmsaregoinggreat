@@ -34,6 +34,7 @@ const Project = ({ project }) => {
             src={project.fields['Image'][0].url}
             width={project.fields['Image'][0].width}
             height={project.fields['Image'][0].height}
+            alt="Project image"
           />
         </div>
       )}
@@ -41,11 +42,7 @@ const Project = ({ project }) => {
       {project.fields['Description'] && (
         <div className="mt-12 mb-16">
           {project.fields['Description'].split('\n\n').map((paragraph, v) => (
-            <p key={v}>
-              {paragraph
-                .split('\n')
-                .reduce((total, line) => [total, <br />, line])}
-            </p>
+            <p key={v}>{paragraph}</p>
           ))}
         </div>
       )}
