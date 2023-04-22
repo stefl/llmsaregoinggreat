@@ -49,4 +49,4 @@ export function getStaticProps() {
   return { props: { globalData } };
 }
 
-export default AboutTheProject;
+export default SubmitIdea;
