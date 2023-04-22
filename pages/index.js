@@ -18,21 +18,21 @@ export default function Index({ posts, globalData }) {
           {globalData.blogTitle}
         </h1>
         <p className="block mb-12 text-center">
-          A crowd-sourced collection of everything you shouldn't be building
-          with LLMs. You're… not doing that right?
+          A crowd-sourced collection of everything you shouldn&apos;t be building
+          with LLMs. You&apos;re… not doing that right?
         </p>
         <div className="flex-row flex w-full">
           <div className="flex-auto text-center">
             <Link href="/evil">
               <a className="border border-white font-bold text-xl rounded p-4 hover:bg-white hover:text-gray-600">
-                I'm feeling evil
+                I&apos;m feeling evil
               </a>
             </Link>
           </div>
           <div className="flex-auto text-center">
             <Link href="/evil">
               <a className="border border-white font-bold text-xl rounded p-4 hover:bg-white hover:text-gray-600">
-                I'm feeling good
+                I&apos;m feeling good
               </a>
             </Link>
           </div>
