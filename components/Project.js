@@ -40,8 +40,8 @@ const Project = ({ project }) => {
 
       {project.fields['Description'] && (
         <div className="mt-12 mb-16">
-          {project.fields['Description'].split('\n\n').map((paragraph) => (
-            <p>
+          {project.fields['Description'].split('\n\n').map((paragraph, v) => (
+            <p key={v}>
               {paragraph
                 .split('\n')
                 .reduce((total, line) => [total, <br />, line])}
