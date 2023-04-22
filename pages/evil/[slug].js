@@ -7,15 +7,14 @@ import Header from '../../components/Header';
 import Layout, { GradientBackground } from '../../components/Layout';
 import { getGlobalData } from '../../utils/global-data';
 import SEO from '../../components/SEO';
-import Link from 'next/link';
 const EvilProject = ({ project, globalData }) => {
   return (
     <Layout>
-      <SEO title={globalData.name} description={globalData.blogTitle} />
-      <Header name={globalData.name} />
+      <SEO title={project.fields['Name']} description={project.fields['One Liner']} />
+      <Header name="LLMs are Going Great!" />
       <main className="w-full">
         <h1 className="text-3xl lg:text-5xl text-center mb-12">
-          {project.fields["Name"]}
+          {project.fields['Name']}
         </h1>
         <Project project={project} />
       </main>
@@ -41,7 +40,7 @@ export async function getStaticProps({ params }) {
   const globalData = getGlobalData();
 
   return {
-    props: { project: data.find((p) => p.fields['Slug'] === slug), globalData },
+    props: { globalData, project: data.find((p) => p.fields['Slug'] === slug) },
     revalidate: 60,
   };
 }

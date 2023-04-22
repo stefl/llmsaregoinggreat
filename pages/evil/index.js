@@ -24,7 +24,7 @@ export default function Evil({ posts, globalData }) {
       <Header name={globalData.name} />
       <main className="w-full">
         <h1 className="text-3xl lg:text-5xl text-center mb-12">
-          <Link href="/">{globalData.blogTitle}</Link>
+          <Link href="/">Okay, let&apos;s get evil</Link>
         </h1>
         {posts && (
           <ul className="w-full">
